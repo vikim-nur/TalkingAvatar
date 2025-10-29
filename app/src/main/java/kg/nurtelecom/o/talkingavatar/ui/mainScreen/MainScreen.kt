@@ -145,7 +145,8 @@ fun MainScreen() {
             Spacer(modifier = Modifier.height(16.dp))
             Button(onClick = {
                 permissionLauncher.launch(Manifest.permission.RECORD_AUDIO)
-            }) {
+            },
+                enabled = !state.isPreparing && !state.isSpeaking) {
                 Text("Задать вопрос")
             }
 
