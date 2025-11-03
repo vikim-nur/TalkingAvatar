@@ -154,7 +154,7 @@ fun MainScreen() {
 
             Button(
                 onClick = {
-                    audioPlayer.release()
+                    audioPlayer.stop()
                     viewModel.onSpeakingFinished()
                 },
                 enabled = state.isSpeaking
