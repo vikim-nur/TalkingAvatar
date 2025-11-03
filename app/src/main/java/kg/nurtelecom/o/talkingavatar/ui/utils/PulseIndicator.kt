@@ -43,7 +43,7 @@ fun PulseIndicator(
         return ((elapsedMs % periodMs).toFloat() / periodMs.toFloat())
     }
 
-    Box(modifier.size(80.dp), contentAlignment = Alignment.Center) {
+    Box(modifier.size(140.dp), contentAlignment = Alignment.Center) {
         @Composable
         fun Ring(p: Float) = Box(
             Modifier
@@ -53,7 +53,7 @@ fun PulseIndicator(
                     scaleY = 1f + 0.8f * p
                     alpha = 1f - p
                 }
-                .border(12.dp, Color.Magenta.copy(alpha = 0.9f), CircleShape)
+                .border(24.dp, Color.Magenta.copy(alpha = 0.9f), CircleShape)
         )
 
         Ring(phase(offsetsMs[0]))
